@@ -8,7 +8,8 @@ spring:
           uri: https://github.com/AlexJialene/my-spring-cloud-repo
           search-paths: repos
           username: 467146659@qq.com
-          password: jiayu13202440139
+          # todo update
+          password: xxx
       label: master
   application:
     name: sc-config
