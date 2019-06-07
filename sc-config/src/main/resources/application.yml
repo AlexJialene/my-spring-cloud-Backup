@@ -1,0 +1,14 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AlexJialene/my-spring-cloud-repo
+          search-paths: repos
+          username: 467146659@qq.com
+          password: jiayu13202440139
+      label: master
+  application:
+    name: sc-config

@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: sc-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lower-case-service-id: true
+
+      routes:
+      - id: client1
+        uri: lb://EUREKA-CLI
+        predicates:
+        - Path=/api/**
+        filters:
+        - StripPrefix=1
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8887
+
+
